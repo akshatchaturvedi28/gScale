@@ -42,7 +42,8 @@ app.post('/', function (req, res) {
 // create about page route
 app.get('/about.html', function (req, res) {
     res.render('about', {
-    	extra_stuff: "This is about page..."
+    	title: "AboutMe",
+    	style: "about.css",
     });
 
 });
