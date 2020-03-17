@@ -84,6 +84,30 @@ app.get('/dil-ka-dariya.html', function (req, res) {
     res.render('bollywood/dil-ka-dariya');
 });
 
+
+
+/* Creating Page routes for Hollywood Songs Chords */
+
+app.get('/perfect.html', function (req, res) {  
+    res.render('hollywood/perfect');
+});
+
+app.get('/say_you_wont_let_go.html', function (req, res) {
+    res.render('hollywood/say_you_wont_let_go');
+});
+
+app.get('/im_yours.html', function (req, res) {
+    res.render('hollywood/im_yours');
+});
+
+app.get('/photograph.html', function (req, res) {
+    res.render('hollywood/photograph');
+});
+
+app.get('/heyjude.html', function (req, res) {
+    res.render('hollywood/heyjude');
+});
+
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
