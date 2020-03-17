@@ -23,12 +23,16 @@ app.set('view engine', 'handlebars');
 
 // Set Handlebar Home GET route
 app.get('/', function (req, res) {
-		res.render('home');
+		res.render('home',{
+            style: "home.css",
+        });
 });
 
 // Set Handlebar Home GET route
 app.get('/home.html', function (req, res) {
-		res.render('home');
+		res.render('home',{
+            style: "home.css",
+        });
 });
 
 app.post('/', function (req, res) {
@@ -49,15 +53,19 @@ app.get('/about.html', function (req, res) {
 });
 
 
-// create bollywood page route
+// create Bollywood page route
 app.get('/bollywood.html', function (req, res) {
-    res.render('bollywood');
+    res.render('bollywood', {
+        style: "bollywood.css",
+    });
 
 });
 
-// create hollywood page route
+// create Hollywood page route
 app.get('/hollywood.html', function (req, res) {
-    res.render('hollywood');
+    res.render('hollywood',{
+        style: "hollywood.css",
+    });
 
 });
 
