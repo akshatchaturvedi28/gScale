@@ -5,12 +5,36 @@
 
 </br>
 
-<ul class="list-group list-group-flush">
-	<li class="list-group-item"> <a href='/bekhayali.html' style="color: black;"> <strong> <mark> Bekhayali </mark> </strong> </li>
-	<li class="list-group-item"> <a href='/dil-ka-dariya.html' style="color: black;"> <strong> <mark> Dil ka Dariya </mark> </strong> </li>
-	<li class="list-group-item"> <a href='/hawayein.html' style="color: black;"> <strong> <mark> Hawayein </mark> </strong> </li>
-	<li class="list-group-item"> <a href='/nazm-nazm.html' style="color: black;"> <strong> <mark> Nazm Nazm </mark> </strong> </li>
-	<li class="list-group-item"> <a href='/sun-mere-humsafar.html' style="color: black;"> <strong> <mark> Sun Mere Humsafar </mark> </strong> </a> </li>  
+<div>
+<input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search for Song.." title="Type in a category">
+<br>
+<br>
+<ul class="list-group list-group-flush" id="bollywood-songs">
+	<li class="list-group-item"> <a href='/users/bekhayali.html' style="color: black;"> <strong> <mark> Bekhayali </mark> </strong> </a></li>
+	<li class="list-group-item"> <a href='/users/dil-ka-dariya.html' style="color: black;"> <strong> <mark> Dil ka Dariya </mark> </strong> </a></li>
+	<li class="list-group-item"> <a href='/users/hawayein.html' style="color: black;"> <strong> <mark> Hawayein </mark> </strong> </a></li>
+	<li class="list-group-item"> <a href='/users/nazm-nazm.html' style="color: black;"> <strong> <mark> Nazm Nazm </mark> </strong> </a></li>
+	<li class="list-group-item"> <a href='/users/sun-mere-humsafar.html' style="color: black;"> <strong> <mark> Sun Mere Humsafar </mark> </strong> </a> </li>  
   
   
 </ul>
+</div>
+
+<script>
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("bollywood-songs");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
+</script>
